@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "romeo.drawer",
+  "name": "Drawer",
+  "version": "1.0.0",
+  "author": "romeo",
+  "license": "MIT",
+  "description": "Hides chosen bar widgets behind a single bar icon and gives them back as a popup menu, with their panels and click actions intact.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Drawer.qml"
+  },
+  "barWidget": {
+    "displayName": "Drawer",
+    "description": "A popup menu holding bar widgets you would rather not see all the time.",
+    "category": "Bar",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "items": [],
+      "icon": "grid",
+      "showCount": true,
+      "closeOnActivate": true,
+      "hideWhenEmpty": false,
+      "layout": "list",
+      "gridLabels": false,
+      "gridColumns": 4
+    },
+    "schema": [
+      {
+        "key": "items",
+        "type": "array",
+        "label": "Hidden widgets",
+        "description": "Managed from the drawer's own list: each entry records a widget id plus the section and neighbour it came from, so showing it again puts it back in place.",
+        "defaultValue": []
+      },
+      {
+        "key": "icon",
+        "type": "string",
+        "label": "Bar icon",
+        "description": "grid, squares, tiles, apps, hamburger, kebab, dots, inbox, folder, layers, brick, puzzle, or chevron (which follows the bar edge).",
+        "defaultValue": "grid"
+      },
+      {
+        "key": "layout",
+        "type": "string",
+        "label": "View",
+        "description": "list for one row per widget, grid for a block of icon tiles.",
+        "defaultValue": "list"
+      },
+      {
+        "key": "gridColumns",
+        "type": "number",
+        "label": "Icons per row",
+        "description": "How many tiles the grid puts on each row, 2 to 8. Grid view only.",
+        "defaultValue": 4
+      },
+      {
+        "key": "gridLabels",
+        "type": "boolean",
+        "label": "Show names under the icons",
+        "description": "Grid view only. Off keeps the grid to bare icons, with the name on hover.",
+        "defaultValue": false
+      },
+      {
+        "key": "showCount",
+        "type": "boolean",
+        "label": "Show how many are hidden",
+        "description": "Paints the number of hidden widgets next to the drawer icon.",
+        "defaultValue": true
+      },
+      {
+        "key": "closeOnActivate",
+        "type": "boolean",
+        "label": "Close when a widget is opened",
+        "description": "Off keeps the drawer open behind the widget's own panel.",
+        "defaultValue": true
+      },
+      {
+        "key": "hideWhenEmpty",
+        "type": "boolean",
+        "label": "Hide the drawer when it is empty",
+        "description": "Takes the icon off the bar until something is hidden.",
+        "defaultValue": false
+      }
+    ]
+  }
+}
