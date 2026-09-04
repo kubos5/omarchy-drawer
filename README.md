@@ -1,6 +1,6 @@
 # Drawer
 
-Hide plugins that clutter your menu bar
+Hide plugins that clutter your menu bar.
 
 Install:
 ```bash
