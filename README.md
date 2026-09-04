@@ -15,6 +15,21 @@ omarchy plugin add https://github.com/kubos5/omarchy-drawer.git --enable
 
 You can also right click the icon to go straight to the settings.
 
+## Gallery
+
+<img width="479" height="312" alt="image" src="https://github.com/user-attachments/assets/5ab0bcf6-5b31-489a-8bb2-65ae135bf88d" />
+
+Grid view
+
+<img width="539" height="330" alt="image" src="https://github.com/user-attachments/assets/94508c21-5294-45bd-a0d0-dd43ba48ef71" />
+
+List view
+
+<img width="673" height="842" alt="image" src="https://github.com/user-attachments/assets/3c067cb4-86c8-4352-9b5e-19b2b68b90e9" />
+
+Settings
+
+
 ---
 
 ## How does it work?
@@ -58,3 +73,7 @@ The drawer works best for widgets that own a panel: audio, network, bluetooth, p
 Container widgets that paint *many* buttons (the system tray, workspaces, indicators) degrade: the row shows and forwards to the first of those buttons only, so they are better left in the bar.
 
 Editing `Model.js` needs a full `omarchy restart shell`; QML under `~/.config/omarchy/plugins/` hot-reloads, but an imported `.js` library stays cached, and a hot reload also leaves the old `IpcHandler` registered.
+
+## Transparency
+
+Generative AI was used during the creation of this plugin. All of the code was still verified by me.
